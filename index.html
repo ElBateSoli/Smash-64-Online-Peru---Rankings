@@ -24,9 +24,7 @@
     header {
       text-align: center;
       padding: 58px 20px 36px;
-      background:
-        linear-gradient(135deg, rgba(210, 0, 0, 0.45), rgba(255, 200, 0, 0.18)),
-        url('') center/cover;
+      background: linear-gradient(135deg, rgba(210, 0, 0, 0.45), rgba(255, 200, 0, 0.18));
       border-bottom: 4px solid #ffcc00;
     }
 
@@ -199,7 +197,7 @@
       font-size: 13px;
     }
 
-    .rules, .report-card, .edit-card {
+    .rules {
       background: rgba(15, 15, 15, 0.9);
       border: 2px solid rgba(255, 204, 0, 0.45);
       border-radius: 20px;
@@ -209,28 +207,6 @@
 
     .rules ul {
       padding-left: 20px;
-    }
-
-    .report-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 14px;
-      margin-top: 14px;
-    }
-
-    .input-box {
-      background: #101010;
-      border: 1px solid rgba(255, 204, 0, 0.45);
-      padding: 13px;
-      border-radius: 12px;
-      color: #ddd;
-    }
-
-    code {
-      background: #000;
-      color: #ffcc00;
-      padding: 2px 6px;
-      border-radius: 6px;
     }
 
     footer {
@@ -254,22 +230,20 @@
   <header>
     <div class="badge">Ranking Teams Perú</div>
     <h1>Smash 64 Online Perú</h1>
-    <p class="subtitle">Ranking del mejor compañero en teams — temporada desde cero</p>
+    <p class="subtitle">Ranking del mejor compañero en teams — temporada FT10</p>
   </header>
 
   <nav>
     <a href="#ranking">Ranking</a>
     <a href="#reglas">Sistema de puntos</a>
-    
-    <a href="#editar">Cómo editar</a>
   </nav>
 
   <main>
     <div class="hero-card" id="info">
-      <h2>¿Quién es el mejor compañero de teams?</h2>
+      <h2>¿Quién es el mejor compañero en modo TEAMS?</h2>
       <p>
-        Este ranking mide a los jugadores que mejor funcionan en pareja: ganan sets,
-        ayudan al teammate, mantienen buena comunicación y son constantes en torneos o retas online.
+        Este ranking mide a los jugadores que mejor funcionan en modo TEAMS: ganan FT10,
+        ayudan al compa, mantienen buena comunicación y son constantes en torneos o retas online.
       </p>
 
       <div class="stats">
@@ -279,11 +253,11 @@
         </div>
         <div class="stat">
           <strong id="totalMatches">0</strong>
-          <span>Matches reportados</span>
+          <span>Partidas reportadas</span>
         </div>
         <div class="stat">
-          <strong>FT3</strong>
-          <span>Formato base</span>
+          <strong>FT10</strong>
+          <span>Formato principal</span>
         </div>
       </div>
     </div>
@@ -313,230 +287,71 @@
       <h2>Sistema de puntos</h2>
       <div class="rules">
         <ul>
-          <li>Ganar un set de teams: <strong>+3 puntos</strong></li>
-          <li>Perder un set peleado: <strong>+1 punto</strong></li>
-          <li>Ser votado como buen compañero: <strong>+2 puntos</strong></li>
+          <li>Ganar un FT10 de teams: <strong>+3 puntos</strong></li>
+          <li>Perder un FT10 peleado: <strong>+1 punto</strong></li>
+          <li>Ser votado como buen compañero: <strong>+1 puntos</strong></li>
           <li>Abandonar match sin avisar: <strong>-3 puntos</strong></li>
-          <li>Lag test obligatorio antes de match oficial.</li>
-          <li>Se recomienda reportar resultado con screenshot.</li>
         </ul>
       </div>
     </section>
+  </main>
 
-    
-
-    
   <footer>
-    <p>© 2026 🇵🇪 Smash 64 Online Perú — creado para la comunidad</p>
+    <p>© 2026 Smash 64 Online Perú — creado para la comunidad por ElBateSoli</p>
   </footer>
 
   <script>
     const jugadores = [
-      {
-        nombre: "Nax",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Pochito",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Antonio",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "JeyKeyAr",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "ElBateSoli",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Black-Lee",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Atem",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Elcomecaca",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Racilor",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Shion",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Xixi",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Matapasivos",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Gost",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Lisaqui",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Mr. Style",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Dcris",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Xengar",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Fedef",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Willy",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      },
-      {
-        nombre: "Feliero",
-        main: "?",
-        dupla: "Por definir",
-        victorias: 0,
-        derrotas: 0,
-        confianza: "Sin datos",
-        puntos: 0
-      }
+      { nombre: "Pochito", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Nax", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Antonio", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "JeyKeyAr", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "ElBateSoli", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Black-Lee", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Atem", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Elcomecaca", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Racilor", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Shion", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Xixi", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Matapasivos", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Gost", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Lisaqui", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Mr. Style", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Dcris", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Xengar", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Fedef", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Willy", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Feliero", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 }
     ];
 
     const rankingBody = document.getElementById("rankingBody");
     const totalPlayers = document.getElementById("totalPlayers");
     const totalMatches = document.getElementById("totalMatches");
 
-    jugadores
-      .sort((a, b) => b.puntos - a.puntos || b.victorias - a.victorias)
-      .forEach((jugador, index) => {
-        const puestoClase = index === 0 ? "rank top1" : "rank";
+    function renderTabla() {
+      rankingBody.innerHTML = "";
 
-        rankingBody.innerHTML += `
-          <tr>
-            <td class="${puestoClase}">#${index + 1}</td>
-            <td class="player">${jugador.nombre}</td>
-            <td><span class="tag">${jugador.main}</span></td>
-            <td>${jugador.dupla}</td>
-            <td>${jugador.victorias}</td>
-            <td>${jugador.derrotas}</td>
-            <td>${jugador.confianza}</td>
-            <td><strong>${jugador.puntos}</strong></td>
-          </tr>
-        `;
-      });
+      jugadores
+        .sort((a, b) => b.puntos - a.puntos || b.victorias - a.victorias)
+        .forEach((jugador, index) => {
+          const puestoClase = index === 0 ? "rank top1" : "rank";
 
+          rankingBody.innerHTML += `
+            <tr>
+              <td class="${puestoClase}">#${index + 1}</td>
+              <td class="player">${jugador.nombre}</td>
+              <td><span class="tag">${jugador.main}</span></td>
+              <td>${jugador.dupla}</td>
+              <td>${jugador.victorias}</td>
+              <td>${jugador.derrotas}</td>
+              <td>${jugador.confianza}</td>
+              <td><strong>${jugador.puntos}</strong></td>
+            </tr>
+          `;
+        });
+    }
+
+    renderTabla();
     totalPlayers.textContent = jugadores.length;
     totalMatches.textContent = jugadores.reduce((total, jugador) => total + jugador.victorias + jugador.derrotas, 0);
   </script>
