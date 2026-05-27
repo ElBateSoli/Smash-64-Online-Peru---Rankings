@@ -180,7 +180,19 @@
     }
 
     .top1 {
-      color: #ffcc00;
+  color: #ffd700;
+  text-shadow: 0 0 12px #ffd700;
+}
+
+.top2 {
+  color: #c0c0c0;
+  text-shadow: 0 0 10px #c0c0c0;
+}
+
+.top3 {
+  color: #cd7f32;
+  text-shadow: 0 0 10px #cd7f32;
+}
     }
 
     .player {
@@ -289,7 +301,6 @@
         <ul>
           <li>Ganar un FT10 de teams: <strong>+3 puntos</strong></li>
           <li>Perder un FT10 peleado: <strong>+1 punto</strong></li>
-          <li>Ser votado como buen compañero: <strong>+1 puntos</strong></li>
           <li>Abandonar match sin avisar: <strong>-3 puntos</strong></li>
         </ul>
       </div>
@@ -302,8 +313,8 @@
 
   <script>
     const jugadores = [
-      { nombre: "Pochito", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
       { nombre: "Nax", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
+      { nombre: "Pochito", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
       { nombre: "Antonio", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
       { nombre: "JeyKeyAr", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
       { nombre: "ElBateSoli", main: "?", dupla: "Por definir", victorias: 0, derrotas: 0, confianza: "Sin datos", puntos: 0 },
@@ -334,8 +345,13 @@
       jugadores
         .sort((a, b) => b.puntos - a.puntos || b.victorias - a.victorias)
         .forEach((jugador, index) => {
-          const puestoClase = index === 0 ? "rank top1" : "rank";
 
+          let puestoClase = "rank";
+
+          if (index === 0) puestoClase = "rank top1";
+          if (index === 1) puestoClase = "rank top2";
+          if (index === 2) puestoClase = "rank top3";
+          
           rankingBody.innerHTML += `
             <tr>
               <td class="${puestoClase}">#${index + 1}</td>
