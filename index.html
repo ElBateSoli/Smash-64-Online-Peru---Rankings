@@ -369,7 +369,9 @@
 
     renderTabla();
     totalPlayers.textContent = jugadores.length;
-    totalMatches.textContent = jugadores.reduce((total, jugador) => total + jugador.victorias + jugador.derrotas, 0);
+    
+    const partidasReportadas = 2;
+    totalMatches.textContent = partidasReportadas;
   </script>
 </body>
 </html>
